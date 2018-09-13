@@ -30,7 +30,7 @@ export class LoggerService {
       splat(),
       // eslint-disable arrow-parens
       format.printf(info => {
-        return `[${info.timestamp}]-${info.level} (${info.label}): ${info.message}`;
+        return `[${info.timestamp}]-[${settings.pid}] [${info.label}] ${info.level}: ${info.message}`;
       })
     );
   }
